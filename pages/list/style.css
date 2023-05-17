@@ -1,0 +1,100 @@
+body{
+    background-color: #151626;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    color: whitesmoke;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+
+    @media(max-width: 600px){
+        margin-top: -30px;
+        font-size: 10px;
+    }
+}
+
+input{
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    color: whitesmoke;
+    font-size: 1rem;
+    border-radius: 20px;
+    margin: 10px;
+    padding-left: 15px;
+}
+
+.cartao-container{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media(max-width: 800px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: 600px){
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.cartao{
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    box-shadow: 2px 2px 4px whitesmoke; 
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@keyframes pulse{
+    0%{
+        border-color: goldenrod;
+    }
+
+    50%{
+        border-color: gold;
+    }
+
+    100%{
+        border-color: whitesmoke;
+    }
+}
+
+.cartao:hover{
+    transform: scale(1.1);
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    box-shadow: 2px 2px 4px goldenrod;
+    transition: 1s;
+    animation: pulse 1.5s infinite;
+}
+
+.cartao .name{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.cartao button {
+    background-color: blue;
+    color: whitesmoke;
+    padding: 7px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cartao button:hover{
+    background-color: goldenrod;
+    color: black;
+}

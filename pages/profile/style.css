@@ -1,0 +1,49 @@
+body{
+    background-color: #151626;
+    color: whitesmoke;
+}
+
+header{
+    background-color: blue;  
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: 2px 2px 4px black;
+
+    @media(max-width: 600px){
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+.icon{
+    cursor: pointer;
+}
+
+.user-info{
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 10vh;
+}
+
+.title{
+    font-size: 25px;
+    margin-top: 15vh;
+
+    @media(max-width: 600px){
+      font-size: 18px;
+    }
+}
+
+.search{
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    color: whitesmoke;
+    font-size: 1rem;
+    border-radius: 20px;
+    margin: 10px;
+    padding-left: 15px 
+}
