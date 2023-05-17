@@ -32,7 +32,7 @@ document.getElementById('form').addEventListener('submit', (e)=>{
         },
         body: JSON.stringify(body)
     }).then(res => res.text()).then(()=>{
-        alert(`${title.value} cadastrado com sucesso`)
+        alert(`${title.value} cadastrado com sucesso.`)
         location.href='../list/index.html'
     }).catch(e=>{
         alert(e.message)
