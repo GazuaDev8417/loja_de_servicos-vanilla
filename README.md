@@ -1,0 +1,1 @@
+# loja-de-servicos_vanilla
