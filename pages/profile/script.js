@@ -1,4 +1,8 @@
 const BASE_URL = 'https://achei-servicos-server.vercel.app'
+const search = document.querySelector('.search')
+let jobs = []
+
+console.log(search.value)
 
 window.addEventListener('load', ()=>{
     const token = localStorage.getItem('token')
@@ -82,16 +86,17 @@ const  userJobs = ()=>{
             return res.text()
         }
     }).then(data=>{
-        
+        jobs = data
+
         document.querySelector('.userJobs').innerHTML = data.map(job=>{
             return`
                 <div
                     style='display:flex; align-items: center; justify-content: space-between;
-                    border: 1px solid whitesmoke; margin: 20px; padding: 10px;
-                    border-radius: 10px;' 
-                    key='${job.id}'>
+                        border: 1px solid whitesmoke; margin: 20px; padding: 10px;
+                        border-radius: 10px;' 
+                        key='${job.id}'>
                     <div style='color: white;'>
-                        ${job.title}
+                    ${job.title}
                     </div>
                     <i 
                         id='${job.id}'
@@ -101,11 +106,39 @@ const  userJobs = ()=>{
                         style='color: white; cursor: pointer;'
                         class="fa-solid fa-trash"></i>
                 </div>
-            `
+                `
         }).join('')
     }).catch(e=>{
         alert(e.message)
     })
 }
-
+    
 userJobs()
+        
+search.addEventListener('input', ()=>{
+    const filtered = jobs.filter(item=>{
+        return item.title.toLowerCase().includes(search.value.toLocaleLowerCase())
+    })
+
+    document.querySelector('.userJobs').innerHTML = filtered.map(job=>{
+        return`
+            <div
+                style='display:flex; align-items: center; justify-content: space-between;
+                    border: 1px solid whitesmoke; margin: 20px; padding: 10px;
+                    border-radius: 10px;' 
+                    key='${job.id}'>
+                <div style='color: white;'>
+                ${job.title}
+                </div>
+                <i 
+                    id='${job.id}'
+                    onmouseover='mouseOnIcon("${job.id}")'
+                    onmouseout='mouseOutIcon("${job.id}")'
+                    onclick='deleteJob(${JSON.stringify(job)})'
+                    style='color: white; cursor: pointer;'
+                    class="fa-solid fa-trash"></i>
+            </div>
+            `
+    }).join('')
+})
+
