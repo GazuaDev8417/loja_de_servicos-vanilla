@@ -17,9 +17,6 @@ header{
     @media(max-width: 600px){
         font-size: 20px;
         padding: 10px;
-        button {
-            padding: 7px;
-        }
     }
 }
 
@@ -54,6 +51,10 @@ fieldset{
     @media(max-width: 600px){
         width: 80vw; 
     }
+
+    @media(max-width: 800px){
+        width: 80%;
+    }
 }
 
 input{
@@ -64,6 +65,12 @@ input{
     border-radius: 20px;
     padding-left: 10px;
     margin: 10px;
+}
+
+input[type='email'], input[type='password']{
+    @media(max-width: 800px){
+        width: 80%;
+    }
 }
 
 input::placeholder {
