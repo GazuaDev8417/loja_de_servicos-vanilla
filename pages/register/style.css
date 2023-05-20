@@ -44,12 +44,16 @@ fieldset{
     border-radius: 10px;
     padding: 10px;
 
-    @media(max-width: 600px){
-        width: 80vw;
+    @media(max-width: 800px){
+        width: 70%;
     }
 
-    @media(max-width: 800px){
-        width: 60vw;
+    @media(max-width: 600px){
+        width: 90%;
+    }
+
+    @media(max-width: 700px){
+        width: 90%;
     }
 }
 
@@ -106,14 +110,14 @@ textarea{
     justify-content: space-between;
     width: 18vw;
     margin-top: 10px;
+    
     @media(max-width: 600px){
         width: 80%;
-        flex-direction: row;
         justify-content: space-between;
     }
 
     @media(max-width: 800px){
-        width: 80%;
+        width: 70%;
         flex-direction: row;
         justify-content: space-between;
     }
