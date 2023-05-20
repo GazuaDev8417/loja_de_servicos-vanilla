@@ -13,13 +13,10 @@ header{
     padding: 0 15px;
     box-shadow: 2px 2px 4px black;
 
-    @media(max-width: 600px){
+    @media(max-width: 800px){
         font-size: 20px;
         padding: 10px;
-        button {
-            padding: 7px;
-        }
-      }
+    }
 }
 
 .icon{
