@@ -1,6 +1,6 @@
 const jobs = document.getElementById('services')
 const search = document.getElementById('search')
-const BASE_URL = 'https://achei-servicos-server.vercel.app'
+const BASE_URL = 'https://loja-de-servicos-server.vercel.app'
 let services = []
 
 
