@@ -1,4 +1,4 @@
-const BASE_URL = 'https://achei-servicos-server.vercel.app'
+const BASE_URL = 'https://loja-de-servicos-server.vercel.app'
 const search = document.querySelector('.search')
 let jobs = []
 
