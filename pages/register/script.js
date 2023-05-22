@@ -2,7 +2,7 @@ const title = document.getElementById('title')
 const description = document.getElementById('description')
 const phone = document.getElementById('phone')
 const period = document.getElementById('period')
-const BASE_URL = 'https://achei-servicos-server.vercel.app'
+const BASE_URL = 'https://loja-de-servicos-server.vercel.app'
 
 
 
